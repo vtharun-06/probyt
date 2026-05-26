@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-16 px-6 overflow-hidden">
+    <section className="min-h-screen flex items-center pt-20 pb-12 sm:pb-16 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* Text */}
@@ -127,7 +127,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.9, type: "spring" }}
-            className="absolute -top-4 -right-4 bg-white border border-border rounded-2xl px-4 py-3 shadow-lg shadow-ink/8"
+            className="absolute top-4 right-4 sm:-top-4 sm:-right-4 bg-white border border-border rounded-2xl px-4 py-3 shadow-lg shadow-ink/8"
           >
             <p className="text-xs text-muted font-medium">Protein goal</p>
             <p className="font-display text-xl font-bold text-ink">12 bytes</p>

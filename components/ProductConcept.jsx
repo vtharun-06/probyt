@@ -34,7 +34,7 @@ function StepCard({ s, index, total }) {
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, delay: index * 0.15 }}
-      className="relative flex-1 p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/8 transition-all duration-300 group"
+      className="relative flex-1 p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/8 transition-all duration-300 group"
     >
       {/* Connector line */}
       {index < total - 1 && (
@@ -56,13 +56,13 @@ export default function ProductConcept() {
   const quoteInView = useInView(quoteRef, { once: true, margin: "-20px" });
 
   return (
-    <section id="product" className="py-28 px-6 bg-ink text-white">
+    <section id="product" className="py-16 sm:py-28 px-6 bg-ink text-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Header + cross-section image */}
         <div
           ref={topRef}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-12 sm:mb-20"
         >
           <motion.div
             initial={{ opacity: 0, x: -32 }}
@@ -113,7 +113,7 @@ export default function ProductConcept() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 sm:mb-20">
           {steps.map((s, i) => (
             <StepCard key={s.number} s={s} index={i} total={steps.length} />
           ))}
@@ -127,7 +127,7 @@ export default function ProductConcept() {
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-white/10 rounded-3xl overflow-hidden"
         >
-          <div className="p-10 sm:p-14 flex flex-col justify-center">
+          <div className="p-7 sm:p-10 lg:p-14 flex flex-col justify-center">
             <p className="text-white/35 text-xs mb-5 uppercase tracking-widest font-semibold">
               The only snack that lets you say
             </p>

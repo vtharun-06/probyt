@@ -42,7 +42,7 @@ function StatCard({ p, index }) {
       {/* Top accent bar */}
       <div className={`h-1 w-full ${p.accent === "terra" ? "bg-terra" : "bg-sage"}`} />
 
-      <div className="p-8">
+      <div className="p-6 sm:p-8">
         <div className="flex items-start justify-between mb-6">
           <span className="text-3xl">{p.icon}</span>
           <span className={`text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full ${
@@ -74,7 +74,7 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-20px" });
 
   return (
-    <section id="problem" className="py-28 px-6 bg-cream border-t border-border">
+    <section id="problem" className="py-16 sm:py-28 px-6 bg-cream border-t border-border">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -82,7 +82,7 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 sm:mb-14"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-terra mb-4">
@@ -108,7 +108,7 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-8 bg-ink rounded-3xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-8 bg-ink rounded-3xl px-6 sm:px-8 py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p className="font-display text-xl font-bold text-white text-center sm:text-left">
             ProByt solves all three. Simultaneously.

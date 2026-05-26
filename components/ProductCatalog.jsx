@@ -84,7 +84,7 @@ export default function ProductCatalog() {
   const inView = useInView(ref, { once: true, margin: "-20px" });
 
   return (
-    <section className="py-28 px-6 border-t border-border bg-cream">
+    <section className="py-16 sm:py-28 px-6 border-t border-border bg-cream">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -92,7 +92,7 @@ export default function ProductCatalog() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 sm:mb-14"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-terra mb-4">
@@ -139,7 +139,7 @@ export default function ProductCatalog() {
           </div>
 
           {/* Text side */}
-          <div className="order-1 lg:order-2 flex flex-col justify-center px-10 py-12">
+          <div className="order-1 lg:order-2 flex flex-col justify-center px-6 sm:px-10 py-8 sm:py-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-terra mb-4">
               Packaging
             </p>
@@ -150,7 +150,7 @@ export default function ProductCatalog() {
               Toss it in your bag, gym kit, or desk drawer.
               Resealable so your bytes stay crispy. Grab bytes, count, go.
             </p>
-            <ul className="grid grid-cols-2 gap-y-3 gap-x-4">
+            <ul className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-y-3 gap-x-4">
               {["No preservatives", "Eggless", "Baked not fried", "High-protein", "Resealable pack", "Real chocolate"].map((tag) => (
                 <li key={tag} className="flex items-center gap-2 text-xs text-white/55">
                   <span className="w-1.5 h-1.5 rounded-full bg-terra flex-shrink-0" />

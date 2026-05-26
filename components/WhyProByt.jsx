@@ -38,7 +38,7 @@ function ReasonRow({ r, index, inView }) {
       initial={{ opacity: 0, y: 48 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.14 }}
-      className={`flex flex-col md:flex-row gap-8 items-stretch p-8 rounded-3xl border transition-all duration-300 group hover:shadow-xl ${
+      className={`flex flex-col md:flex-row gap-6 sm:gap-8 items-stretch p-6 sm:p-8 rounded-3xl border transition-all duration-300 group hover:shadow-xl ${
         r.accent === "terra"
           ? "border-border hover:border-terra/20 bg-white"
           : "border-border hover:border-sage/20 bg-white"
@@ -78,7 +78,7 @@ export default function WhyProByt() {
   const inView = useInView(ref, { once: true, margin: "-20px" });
 
   return (
-    <section id="why" className="py-28 px-6 border-t border-border bg-cream">
+    <section id="why" className="py-16 sm:py-28 px-6 border-t border-border bg-cream">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
@@ -86,7 +86,7 @@ export default function WhyProByt() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 sm:mb-14"
         >
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-terra mb-4">
@@ -120,7 +120,7 @@ export default function WhyProByt() {
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/30 to-transparent" />
-          <div className="absolute inset-0 flex items-center px-10">
+          <div className="absolute inset-0 flex items-center px-6 sm:px-10">
             <div className="max-w-sm">
               <p className="text-white/50 text-xs uppercase tracking-widest font-semibold mb-3">The vision</p>
               <p className="font-display text-3xl sm:text-4xl font-bold text-white leading-snug">

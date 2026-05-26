@@ -39,7 +39,7 @@ export default function Home() {
         <WhyProByt />
 
         {/* Second CTA */}
-        <section id="waitlist" className="py-28 px-6 bg-ink relative overflow-hidden">
+        <section id="waitlist" className="py-16 sm:py-28 px-6 bg-ink relative overflow-hidden">
           {/* Subtle background dots */}
           <div className="absolute inset-0 opacity-5" style={{
             backgroundImage: "radial-gradient(circle, #C1440E 1px, transparent 1px)",

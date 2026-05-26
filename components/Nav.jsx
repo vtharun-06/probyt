@@ -73,7 +73,7 @@ export default function Nav() {
           <div className="flex items-center gap-3">
             <a
               href="#waitlist"
-              className="text-sm font-semibold bg-terra text-white px-5 py-2 rounded-full hover:bg-terra-light transition-all hover:shadow-lg hover:shadow-terra/25 active:scale-95"
+              className="text-xs sm:text-sm font-semibold bg-terra text-white px-3 sm:px-5 py-2 rounded-full hover:bg-terra-light transition-all hover:shadow-lg hover:shadow-terra/25 active:scale-95 whitespace-nowrap"
             >
               Claim Early Access
             </a>
